@@ -1,15 +1,16 @@
-<main>
+<!-- <main class="container">
 <div *ngFor="let singleMovie of movies">
-  <img src="{{ singleMovie.imageUrl }}"  >
+  <img class="box" src="{{ singleMovie.imageUrl }}"  >
 </div>
-</main>
-<!-- 
+</main> -->
 
-<div class="row">
-  <div class="row__inner">
+<main>
+<div class="row" >
+  
+  <div class="row__inner col-sm-12 col-md-4 col-lg-2" *ngFor="let singleMovie of movies">
 
     <div class="tile">
-      <div class="tile__media" *ngFor="let singleMovie of movies">
+      <div class="tile__media">
         <img class="tile__img" src="{{ singleMovie.imageUrl }}" alt="" />
       </div>
       <div class="tile__details">
@@ -20,5 +21,8 @@
     </div>
 
   </div>
-</div> -->
+
+
+</div>
+</main>
 
