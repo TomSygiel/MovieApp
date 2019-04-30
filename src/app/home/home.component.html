@@ -1,3 +1,24 @@
-<p>
-  home works!
-</p>
+<main>
+<div *ngFor="let singleMovie of movies">
+  <img src="{{ singleMovie.imageUrl }}"  >
+</div>
+</main>
+<!-- 
+
+<div class="row">
+  <div class="row__inner">
+
+    <div class="tile">
+      <div class="tile__media" *ngFor="let singleMovie of movies">
+        <img class="tile__img" src="{{ singleMovie.imageUrl }}" alt="" />
+      </div>
+      <div class="tile__details">
+        <div class="tile__title">
+          {{ singleMovie.name }}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+

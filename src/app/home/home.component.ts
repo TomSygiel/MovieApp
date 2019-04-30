@@ -15,8 +15,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.service.getData().subscribe(
-      movieList => this.movies = movieList
+      movieList => {
+        this.movies = movieList
+        console.log(this.movies);
+      }
     );
   }
-
 }
