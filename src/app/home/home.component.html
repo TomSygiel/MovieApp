@@ -1,28 +1,33 @@
 <app-home-header></app-home-header>
 
 <main>
-<div class="row" >
+  <div class="row" >
   
-  <div class="row__inner" *ngFor="let singleMovie of movies">
+    <div class="row__inner" *ngFor="let singleMovie of movies">
+    
+      <a [routerLink]="['/details', singleMovie.id]" routerLinkActive="active" routerLinkActiveOptions = "{ exact: true }">
+        
+        <div class="tile">
+          <!-- <a routerLink="['/details', movies.id]" routerLinkActive="active" routerLinkActiveOptions = "{ exact: true }"> -->
+            <div class="tile__media">
+              <img class="tile__img" src="{{ singleMovie.imageUrl }}" alt="{{ singleMovie.name }}" />
+            </div>
+          <!-- </a> -->
 
-    <div class="tile">
-
-      <div class="tile__media">
-        <img class="tile__img" src="{{ singleMovie.imageUrl }}" alt="{{ singleMovie.name }}" />
-      </div>
-
-      <div class="tile__details">
-        <div class="tile__title">
-          {{ singleMovie.name | slice:0:40 }}
+          <div class="tile__details">
+            <div class="tile__title">
+              {{ singleMovie.name | slice:0:30 }}
+            </div>
+          </div>
+          
         </div>
-      </div>
+
+      </a>
 
     </div>
 
   </div>
 
-
-</div>
 </main>
 
 <app-home-navigation></app-home-navigation>

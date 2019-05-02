@@ -71,7 +71,7 @@ a:hover {
   width: 320px;
   height: 500px;
   margin: 10px;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
   transition: 450ms all;
   transform-origin: left center;
@@ -375,7 +375,7 @@ a:hover {
     width: 200px;
     height: 300px;
     margin: 20px 10px;
-    font-size: 20px;
+    font-size: 12px;
     cursor: pointer;
     transition: 450ms all;
     transform-origin: left center;
@@ -401,7 +401,7 @@ a:hover {
     left: 0;
     right: 0;
     top: 0;
-    font-size: 16px;
+    font-size: 12px;
     opacity: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
     transition: 450ms opacity;

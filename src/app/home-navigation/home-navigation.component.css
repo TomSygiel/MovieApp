@@ -15,12 +15,12 @@
   border-top: 1px solid white;
 }
 
-h3 a {
+h4 a {
   color: red;
   text-decoration: none;
   padding-top: 20px;
 }
 
-h3 a:hover {
+h4 a:hover {
   color: darkred;
 }
