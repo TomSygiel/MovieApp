@@ -1,0 +1,26 @@
+.search_nav_link {
+  padding: 0 50px;
+  margin: 0 auto;
+  width: 100%;
+  height: 80px;
+  background: #0e0f11;
+}
+
+.search_nav_link::before {
+  content: "";
+  right: 0;
+  top: 0;
+  width: 100%;
+  display: block;
+  border-top: 1px solid white;
+}
+
+h3 a {
+  color: red;
+  text-decoration: none;
+  padding-top: 20px;
+}
+
+h3 a:hover {
+  color: darkred;
+}
