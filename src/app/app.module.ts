@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { HomeNavigationComponent } from './home-navigation/home-navigation.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { HomeHeaderComponent } from './home-header/home-header.component';
     AppComponent,
     HomeComponent,
     HomeNavigationComponent,
-    HomeHeaderComponent
+    HomeHeaderComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
