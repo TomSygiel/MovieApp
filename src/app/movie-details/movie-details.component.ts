@@ -10,23 +10,27 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  movies: IMovieProducts;
+  singleMovieDetail: IMovieProducts;
 
   constructor(private route: ActivatedRoute, private service: DataService) { }
 
   ngOnInit() {
-    this.route.params.subscribe(myMovieParams => {
-      let id = +myMovieParams['id'] // This will give you your id
+    this.route.paramMap.subscribe(myMovieParams => {
+      let id = myMovieParams.get('id'); // This will give you your id
 
-      console.log(id);
+      console.log("Id from component: ", id);
 
-      this.service.getData().subscribe(data => {
-        this.movies = data.find(a => a.id === id);
-      })
-
-      console.log(this.movies);
-    
+      this.getMovieDetail(+id);
     });
+  }
+
+  getMovieDetail(id: number) {
+    this.service.getData().subscribe(data => {
+      this.singleMovieDetail = data.find(a => a.id === id);
+
+      console.log(this.singleMovieDetail);
+    });
+
   }
 
 }
