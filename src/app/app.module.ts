@@ -8,7 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { HomeNavigationComponent } from './home-navigation/home-navigation.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
-import { DummyComponent } from './home/home.component.spec';
+import { DetailsNavComponent } from './details-nav/details-nav.component';
+// import { DummyComponent } from './movie-details/movie-details.component.spec';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DummyComponent } from './home/home.component.spec';
     HomeNavigationComponent,
     HomeHeaderComponent,
     MovieDetailsComponent,
-    DummyComponent
+    DetailsNavComponent,
+    // DummyComponent
   ],
   imports: [
     BrowserModule,
