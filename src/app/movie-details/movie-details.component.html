@@ -1,0 +1,19 @@
+<main>
+
+  <div class="row" >
+
+    <div class="movie_details col-6">
+      <h1>{{ singleMovieDetail?.name }}</h1>
+      <p>{{ singleMovieDetail?.year }}</p>
+      <p>{{ singleMovieDetail?.description }}</p>
+    </div>
+
+    <div class="img_frame col-6">
+        <img class="img_detail" src="{{ singleMovieDetail?.imageUrl }}" alt="{{ singleMovieDetail?.name }}" />
+    </div>
+          
+  </div>
+
+</main>
+
+<app-details-nav></app-details-nav>

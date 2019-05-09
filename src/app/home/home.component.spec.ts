@@ -4,6 +4,11 @@ import { HomeComponent } from './home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from '../services/data.service';
 import { MockDataService } from '../services/mock-data.service';
+import { HomeHeaderComponent } from '../home-header/home-header.component';
+import { HomeNavigationComponent } from '../home-navigation/home-navigation.component';
+import { RouterTestingModule } from '@angular/router/testing';
+// import { DummyComponent } from '../movie-details/movie-details.component.spec';
+
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -11,8 +16,9 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
-      imports: [HttpClientModule]
+      declarations: [ HomeComponent, HomeHeaderComponent, HomeNavigationComponent ],
+      imports: [HttpClientModule, RouterTestingModule]
+      // imports: [HttpClientModule, RouterTestingModule.withRoutes([{ path: 'details/:id', component: DummyComponent}])]
     })
     .overrideComponent(HomeComponent, { set: { providers: [{ provide:
       DataService, useClass: MockDataService }]}})

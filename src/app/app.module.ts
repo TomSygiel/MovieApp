@@ -7,14 +7,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { HomeNavigationComponent } from './home-navigation/home-navigation.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
-
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { DetailsNavComponent } from './details-nav/details-nav.component';
+// import { DummyComponent } from './movie-details/movie-details.component.spec';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HomeNavigationComponent,
-    HomeHeaderComponent
+    HomeHeaderComponent,
+    MovieDetailsComponent,
+    DetailsNavComponent,
+    // DummyComponent
   ],
   imports: [
     BrowserModule,
