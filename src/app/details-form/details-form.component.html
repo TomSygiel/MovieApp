@@ -1,0 +1,16 @@
+<form formGroup="streamingPlan" (ngSubmit)="onSubmit()" class="streaming_plan_form">
+  
+  <label>
+  <h4>Select your streaming option below: </h4>
+  </label>
+  <select name="streaming_options" formControlName="streamingOptions">
+    <option value="3-day access">3-day access</option>
+    <option value="7-day access">7-day access</option>
+    <option value="30-day access">30-day access</option>
+  </select>
+
+  <br />
+
+  <button class="myButton" type="submit">Proceed to checkout</button>
+
+</form>
