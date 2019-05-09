@@ -3,7 +3,7 @@
   margin: 0 auto;
   width: 100%;
   height: 80px;
-  background: #0e0f11;
+  background: #221f1f;
 }
 
 .search_nav_link::before {
@@ -16,7 +16,7 @@
 }
 
 h4 a {
-  color: red;
+  color: #e50914;
   text-decoration: none;
   padding-top: 20px;
 }
