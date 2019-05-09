@@ -7,13 +7,8 @@ import { MockDataService } from '../services/mock-data.service';
 import { HomeHeaderComponent } from '../home-header/home-header.component';
 import { HomeNavigationComponent } from '../home-navigation/home-navigation.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Component } from '@angular/core';
+// import { DummyComponent } from '../movie-details/movie-details.component.spec';
 
-@Component({
-  template: ''
-})
-export class DummyComponent {
-}
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -22,7 +17,8 @@ describe('HomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ HomeComponent, HomeHeaderComponent, HomeNavigationComponent ],
-      imports: [HttpClientModule, RouterTestingModule.withRoutes([{ path: 'details/:id', component: DummyComponent}])]
+      imports: [HttpClientModule, RouterTestingModule]
+      // imports: [HttpClientModule, RouterTestingModule.withRoutes([{ path: 'details/:id', component: DummyComponent}])]
     })
     .overrideComponent(HomeComponent, { set: { providers: [{ provide:
       DataService, useClass: MockDataService }]}})
@@ -41,6 +37,6 @@ describe('HomeComponent', () => {
 
   it('getData should return a mock data value', () => {
     expect(component.movies.length).toBeGreaterThan(0);
-    // expect(component.movies.length).toBe(3);
+    expect(component.movies.length).toBe(3);
   });
 });
