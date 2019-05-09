@@ -6,13 +6,13 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRouteStub } from '../testing/activated-route-stub';
 import { MockDataService } from '../services/mock-data.service';
 import { ActivatedRoute } from '@angular/router';
-import { Component } from '@angular/core';
+// import { Component } from '@angular/core';
 
-@Component({
-  template: ''
-})
-export class DummyComponent {
-}
+// @Component({
+//   template: ''
+// })
+// export class DummyComponent {
+// }
 
 describe('MovieDetailsComponent', () => {
   let component: MovieDetailsComponent;
@@ -24,7 +24,8 @@ describe('MovieDetailsComponent', () => {
     activatedRoute.setParams({ id: 1 });
     TestBed.configureTestingModule({
       declarations: [MovieDetailsComponent],
-      imports: [RouterTestingModule.withRoutes([{ path: 'details/:id', component: DummyComponent}])],
+      imports: [RouterTestingModule.withRoutes([])],
+      // imports: [RouterTestingModule.withRoutes([{ path: 'details/:id', component: DummyComponent}])],
       providers: [ { provide: ActivatedRoute, useValue: activatedRoute },
         { provide: DataService, useClass: MockDataService }]
     })
