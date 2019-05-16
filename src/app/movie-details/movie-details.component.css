@@ -1,7 +1,7 @@
 main {
   padding: 0 50px;
   margin: 0 auto;
-  background: #0e0f11;
+  background: #221f1f;
   color: #ecf0f1;
   font-family: 'Open Sans', sans-serif;
   width: 100%;
@@ -13,21 +13,28 @@ main {
   margin: 0 auto;
   display: inline;
   max-height: 100vh;
-  z-index: 999;
+  /* background: linear-gradient(to right, rgba(0,0,0,1) 65%, rgba(0,0,0,0.82) 79%, rgba(0,0,0,0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 760px;
+  z-index: -1; */
 }
 
 .movie_details {
-  padding: 50px 0;
+  padding: 50px;
   max-height: 100vh;
   width: 50%;
   float: left;
-  
+  /* z-index: 1; */
 }
 
 .img_frame {
   width: 100%;
   max-height: 85vh;
   overflow: hidden;
+  /* z-index: 1; */
 }
 
 .img_detail {
@@ -35,4 +42,14 @@ main {
   max-height: auto;
   object-fit: cover;
   float: right;
+  /* z-index: 1; */
+}
+
+.formCard {
+  height: 300px;
+  width: 80%;
+  text-align: center;
+  padding: 50px;
+  margin: 30px 50px;
+  background: #f5f5f1;
 }

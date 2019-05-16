@@ -3,4 +3,5 @@ import { IMovieProducts } from './IMovieProducts';
 
 export interface IDataService {
     getData(): Observable<IMovieProducts[]>
+
 }

@@ -28,7 +28,7 @@ export class MovieDetailsComponent implements OnInit {
     this.service.getData().subscribe(data => {
       this.singleMovieDetail = data.find(a => a.id === id);
 
-      console.log(this.singleMovieDetail);
+      // console.log(this.singleMovieDetail);
     });
 
   }

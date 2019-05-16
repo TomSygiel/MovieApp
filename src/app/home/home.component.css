@@ -4,7 +4,7 @@ CSS for the home component displaying movies
 main {
   padding: 0 50px;
   margin: 0 auto;
-  background: #0e0f11;
+  background: #221f1f;
   color: #ecf0f1;
   font-family: 'Open Sans', sans-serif;
   height: 520px;
@@ -165,7 +165,6 @@ a:hover {
   main {
     padding: 0 50px;
     margin: 0 auto;
-    background: #0e0f11;
     color: #ecf0f1;
     font-family: 'Open Sans', sans-serif;
     height: 520px;

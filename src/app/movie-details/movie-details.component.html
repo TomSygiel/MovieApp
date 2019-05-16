@@ -6,6 +6,9 @@
       <h1>{{ singleMovieDetail?.name }}</h1>
       <p>{{ singleMovieDetail?.year }}</p>
       <p>{{ singleMovieDetail?.description }}</p>
+
+      <app-details-form class="card formCard" [singleMovieDetail]="singleMovieDetail" enabled="false"></app-details-form>
+
     </div>
 
     <div class="img_frame col-6">
