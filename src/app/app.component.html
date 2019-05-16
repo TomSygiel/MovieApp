@@ -1,2 +1,9 @@
 
 <router-outlet></router-outlet>
+
+<!-- 
+För att skapa ordrar, gör en POST-request mot /orders-apiet och lägg med objekt med följande struktur i anropet:
+
+{"id":547,"companyId":0,"created":"0001-01-01T00:00:00","createdBy":null,"paymentMethod":null,"totalPrice":0,"status":0,"orderRows":[]}
+
+Där orderRows är en lista med följande objekt: { ProductId: 1, Amount: 3 }, där värdet för ProductId och Amount blir dina värden. -->
