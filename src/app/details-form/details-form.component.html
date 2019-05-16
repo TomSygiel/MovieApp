@@ -1,16 +1,20 @@
-<form formGroup="streamingPlan" (ngSubmit)="onSubmit()" class="streaming_plan_form">
+<form [formGroup]="streamingPlanForm" class="streaming_plan_form" novalidate>
   
   <label>
   <h4>Select your streaming option below: </h4>
   </label>
-  <select name="streaming_options" formControlName="streamingOptions">
-    <option value="3-day access">3-day access</option>
-    <option value="7-day access">7-day access</option>
-    <option value="30-day access">30-day access</option>
+
+  <select name="streaming_options" formControlName="streamingOptions" autofocus>
+    <option value="" disabled selected hidden>Select plan...</option>
+    <option *ngFor="let streamingPlan of streamingPlanOptions" [value]="streamingPlan.id">{{ streamingPlan.value }}</option>
   </select>
 
   <br />
 
-  <button class="myButton" type="submit">Proceed to checkout</button>
+  <button class="myButton" type="button" (click)='placeOrders()'>Proceed to checkout</button>
+
+  <!-- {{ singleMovieDetail?.name }} -->
+
+  <!-- (ngSubmit)="placeOrders()" -->
 
 </form>

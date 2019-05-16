@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IDataService } from '../interfaces/IDataService';
 import { Observable } from 'rxjs';
-import { IMovieProducts } from '../interfaces/IMovieProducts';
+import { IMovieProducts, IOrderObject } from '../interfaces/IMovieProducts';
 
 @Injectable({
   providedIn: 'root'
@@ -14,4 +14,14 @@ export class DataService implements IDataService {
   }
 
   constructor(private http: HttpClient) { }
+
+  saveOrder(order: IOrderObject) {
+    sessionStorage.setItem('orders', JSON.stringify(order));
+  }
+  
+  createOrder(order: IOrderObject) {
+    return this.http.post('https://medieinstitutet-wie-products.azurewebsites.net/api/orders', order);
+  }
+  
 }
+
