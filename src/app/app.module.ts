@@ -10,6 +10,7 @@ import { HomeHeaderComponent } from './home-header/home-header.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { DetailsNavComponent } from './details-nav/details-nav.component';
 import { DetailsFormComponent } from './details-form/details-form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 // import { DummyComponent } from './movie-details/movie-details.component.spec';
 
 @NgModule({
@@ -26,7 +27,9 @@ import { DetailsFormComponent } from './details-form/details-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
