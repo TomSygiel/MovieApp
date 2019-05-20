@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { IMovieProducts, IOrderObject } from '../interfaces/IMovieProducts';
 import { DataService } from '../services/data.service';
 
@@ -38,20 +38,31 @@ export class DetailsFormComponent implements OnInit {
     
     console.log(this.streamingPlanForm.get('streamingOptions').value);
 
-    this.singleOrderDetail = {
-      id: 0, 
+    let price = 0;
+
+    if (this.streamingPlanForm.get('streamingOptions').value == 0) {
+      price = 100;
+    }
+    if (this.streamingPlanForm.get('streamingOptions').value == 1) {
+      price = 200;
+    }
+    if (this.streamingPlanForm.get('streamingOptions').value == 2) {
+      price = 300;
+    }
+
+    this.singleOrderDetail = { 
       companyId: 10, 
       created:'', 
       createdBy: '', 
       paymentMethod: null,
-      totalPrice :0,
+      totalPrice : price,
       status: this.streamingPlanForm.get('streamingOptions').value,
       orderRows: [{ ProductId: this.singleMovieDetail.id, Amount: 1}]
-    };
+    }
     
     this.service.saveOrder(this.singleOrderDetail);
 
-    // Skicka användaren till nästa steg
+    location.href = '/checkout';
   }
 
 }

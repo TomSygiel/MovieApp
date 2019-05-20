@@ -1,8 +1,7 @@
 .streaming_plan_form {
     display: block;
-    color: #221f1f;
+	color: #221f1f;
 }
-
 
 input[name=streaming_options], select, textarea {
     width: 100%;
