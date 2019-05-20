@@ -1,0 +1,36 @@
+<main class="checkoutBody">
+  <div class="card orderFormCard">
+
+    <form [formGroup]="orderForm" (ngSubmit)="confirmOrder()" class="streaming_plan_form">
+    
+      <h4><strong>Order Summary</strong></h4>
+
+      <br />
+
+      <h5>Title you selected: <br /> {{ singleMovieDetail?.name }}</h5>
+
+      <br/>
+
+      <h5>Your streaming plan: <br /> {{ customerInfo }}</h5>
+
+      <br />
+
+      <h5>Your account will be debited: <br /> {{ savedOrder.totalPrice }} SEK</h5>
+
+      <br />
+
+      <label>
+        <h5><strong>Enter your email to start streaming:</strong></h5>
+          <input name="email_input" type="text" placeholder="Enter your e-mail" formControlName="emailAddress">
+      </label>
+
+      <br />
+
+      <button class="myButton" type="submit">Confirm</button>
+
+    </form>
+  </div>
+
+</main>
+
+<app-details-nav></app-details-nav>

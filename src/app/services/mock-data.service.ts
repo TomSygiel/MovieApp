@@ -19,12 +19,12 @@ export class MockDataService implements IDataService {
   }
 
   orders: IOrderObject[] = [
-    {id: 547, companyId: 10, created: "0001-01-01T00:00:00", createdBy: null, paymentMethod: null, totalPrice: 0,status: 0, orderRows: [{Amount: 1, ProductId: 1}]}
+    {companyId: 10, created: "0001-01-01T00:00:00", createdBy: null, paymentMethod: null, totalPrice: 0,status: 0, orderRows: [{Amount: 1, ProductId: 1}]}
   ] 
 
   setOrders(): Observable<IOrderObject[]> {
     return of(this.orders);
   }
-
+  
   constructor() { }
 }

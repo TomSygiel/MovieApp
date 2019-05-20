@@ -11,6 +11,8 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { DetailsNavComponent } from './details-nav/details-nav.component';
 import { DetailsFormComponent } from './details-form/details-form.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { AdminComponent } from './admin/admin.component';
 // import { DummyComponent } from './movie-details/movie-details.component.spec';
 
 @NgModule({
@@ -22,6 +24,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MovieDetailsComponent,
     DetailsNavComponent,
     DetailsFormComponent,
+    CheckoutComponent,
+    AdminComponent,
     // DummyComponent
   ],
   imports: [
