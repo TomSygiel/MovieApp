@@ -321,7 +321,7 @@ a:hover {
   }
 }
 
-/*Latop desktops*/
+/*Laptop desktops*/
 @media screen and (min-width: 1024px) {
   main {
     padding: 0 50px;
@@ -371,8 +371,10 @@ a:hover {
   .tile {
     position: relative;
     display: inline-block;
-    width: 200px;
-    height: 300px;
+    /* width: 200px;
+    height: 300px; */
+    width: 230px;
+    height: 360px;
     margin: 20px 10px;
     font-size: 12px;
     cursor: pointer;
@@ -390,8 +392,10 @@ a:hover {
   }
 
   .tile__img {
-    width: 200px;
-    height: 300px;
+    /* width: 200px;
+    height: 300px; */
+    width: 230px;
+    height: 360px;
     object-fit: cover;
   }
 
