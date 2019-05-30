@@ -7,7 +7,6 @@ export interface IMovieProducts {
 }
 
 export interface IOrderObject {
-    // id: number;
     companyId: number;
     created: string;
     createdBy: string;
@@ -18,7 +17,25 @@ export interface IOrderObject {
 }
 
 export interface IOrderRow {
-    // OrderId: number;
     ProductId: number;
     Amount: number;
+}
+
+
+export interface IOrderSummary {
+    id: number;
+    companyId: number;
+    created: string;
+    createdBy: string;
+    paymentMethod: string;
+    totalPrice: number;
+    status: number;
+    orderRows: IOrderSummaryRow[];
+}
+
+export interface IOrderSummaryRow {
+    id: number;
+    orderId: number;
+    productId: number;
+    amount: number;
 }
