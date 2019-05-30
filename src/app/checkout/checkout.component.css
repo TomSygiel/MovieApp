@@ -1,7 +1,7 @@
 .checkoutBody {
-	padding: 50px;
+	padding-top: 20px;
 	margin: 0 auto;
-	background: #221f1f;
+	background-color: #03060B;
 	color: #ecf0f1;
 	font-family: 'Open Sans', sans-serif;
 	height: 520px;
@@ -18,9 +18,9 @@
 
 .orderFormCard {
 	height: auto;
-	width: 50%;
+	width: 90%;
 	text-align: center;
-	padding: 20px;
+	padding: 10px;
 	margin: 0 auto;
 	background: #f5f5f1;
 }
@@ -57,24 +57,74 @@ input[name=email_input], select, textarea {
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
 	text-decoration:none;
     text-shadow:0px 1px 0px #810e05;
-    margin-top: 80px;
+	
+	font-size:20px;
+	padding:6px 24px;
+	margin-top: 40px;
 }
-.myButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
-	background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
-	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
-	background:-o-linear-gradient(top, #c62d1f 5%, #f24537 100%);
-	background:-ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);
-	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
-	background-color:#c62d1f;
-}
+
 .myButton:active {
 	position:relative;
 	top:1px;
 }
+
+
+@media screen and (min-width: 768px) {
+
+	.checkoutBody {
+		padding: 100px 50px 0 50px;
+	}
+
+	.orderFormCard {
+		width: 70%;
+		padding: 30px;
+	}
+
+	.myButton {
+		font-size: 20px;
+		padding:6px 24px;
+		margin-top: 80px;
+	}
+
+	input[name=streaming_options], select, textarea {
+		width: 80%;
+		font-size: 16px;
+	  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+	.checkoutBody {
+		padding: 50px;
+	}
+	
+	.orderFormCard {
+		width: 50%;
+	}
+
+	.myButton {
+		font-size:15px;
+		padding:6px 24px;
+		margin-top: 80px;
+	}
+
+	.myButton:hover {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
+		background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+		background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+		background:-o-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+		background:-ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+		background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+		background-color:#c62d1f;
+	}
+	.myButton:active {
+		position:relative;
+		top:1px;
+	}
+}
+

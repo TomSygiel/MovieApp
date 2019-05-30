@@ -2,10 +2,9 @@ header {
   padding: 0 50px;
   margin: 0 auto;
   width: 100%;
-  height: 250px;
-  background: #221f1f;
+  height: 150px;
+  background-color: #03060B;
 }
-
 
 header::after {
   content: "";
@@ -18,16 +17,70 @@ header::after {
 
 h1 {
   color: #e50914;
-  margin: 5px 90px;
+  text-align: center;
+  margin-top: 5px;
 }
 
 p {
   color: white;
-  font-size: 20px;
-  margin: 10px;
+  font-size: 18px;
+  margin: 5px;
 }
 
-.logo_section {
+@media screen and (min-width: 768px) {
+  header {
+    height: 230px;
+  }
+
+  h1 {
+    margin: 10px 0;
+  }
+  
+  p {
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  .logo_section {
     padding: 30px;
-    margin: 0 30px;
+    margin: 0 60px;
+}
+
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    /* padding: 0 50px;
+    margin: 0 auto;
+    width: 100%; */
+    height: 230px;
+    /* background-color: #03060B; */
+  }
+/* 
+
+  header::after {
+    content: "";
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid white;
+  } */
+
+  h1 {
+    /* color: #e50914; */
+    margin: 5px 90px;
+  }
+
+  p {
+    /* color: white;
+    font-size: 20px; */
+    margin: 10px;
+  }
+
+  .logo_section {
+      padding: 30px;
+      margin: 0 30px;
+  }
+
 }

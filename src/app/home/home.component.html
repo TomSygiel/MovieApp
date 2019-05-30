@@ -8,11 +8,10 @@
       <a [routerLink]="['/details', singleMovie?.id]" routerLinkActive="active" routerLinkActiveOptions = "{ exact: true }">
         
         <div class="tile">
-          <!-- <a routerLink="['/details', movies.id]" routerLinkActive="active" routerLinkActiveOptions = "{ exact: true }"> -->
+          
             <div class="tile__media">
               <img class="tile__img" src="{{ singleMovie?.imageUrl }}" alt="{{ singleMovie?.name }}" />
             </div>
-          <!-- </a> -->
 
           <div class="tile__details">
             <div class="tile__title">
@@ -25,7 +24,7 @@
       </a>
 
     </div>
-
+    
   </div>
 
 </main>

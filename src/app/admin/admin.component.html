@@ -1,3 +1,44 @@
-<p>
-  admin works!
-</p>
+
+<main clas="order_summary_main">
+
+    <div class="hero">
+
+      <h3>Orders Summary</h3>
+
+      <table class="admin_panel">
+        <thead>
+          <th>Product code</th>
+          <th>Order date</th>
+          <th>Email account</th> 
+          <th>Price</th>
+          <th>Admin action</th>
+        </thead>
+        <br />
+        <tbody>
+          <tr *ngFor="let singleOrders of orderSummary">
+            <!-- orderPresentation"> <td *ngFor="let orderMovieTitle of singleMovieDetail">{{ orderMovieTitle.name }}</td> -->
+            <td>{{ singleOrders.orderRows[0].productId }}</td>
+            <td>{{ singleOrders.created }}</td>
+            <td>{{ singleOrders.createdBy }}</td>
+            <td>{{ singleOrders.totalPrice }} SEK</td>
+
+            <!-- <td>{{ singleOrders.id }}</td>
+            <td>{{ singleOrders.product }}</td>
+            <td>{{ singleOrders.product[0].name }}</td>
+            <td>{{ singleOrders.date }}</td>
+            <td>{{ singleOrders.email }}</td>
+            <td>{{ singleOrders.planPrice }} SEK</td> -->
+            <button class="myButton" (click)="removeOrder(singleOrders.id)">Remove record</button>
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
+
+</main>
+
+<app-details-nav></app-details-nav>
+<!-- 
+{id:601, companyId: 10, created: "2019-05-20T14:45:00", createdBy: "tom@mail.com", paymentMethod: null,totalPrice: 200, status: 1, orderRows: [{id: 1030, productId: 1, amount:1, orderId:601}]}
+  ] -->
+

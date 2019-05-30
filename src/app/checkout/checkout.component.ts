@@ -1,8 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { IMovieProducts, IOrderObject } from '../interfaces/IMovieProducts';
 import { DataService } from '../services/data.service';
-import { ActivatedRoute } from '@angular/router';
 import * as moment from 'moment';
 
 @Component({
@@ -12,11 +11,8 @@ import * as moment from 'moment';
 })
 export class CheckoutComponent implements OnInit {
 
-  // @Input() singleMovieDetail: IMovieProducts;
-
-  // @Input() singleOrderDetail: IOrderObject;
-
   savedOrder: IOrderObject;
+  
   singleMovieDetail: IMovieProducts;
 
   customerInfo = '';
@@ -87,12 +83,16 @@ export class CheckoutComponent implements OnInit {
     }
 
     this.service.createOrder(this.savedOrder).subscribe(
-      response => console.log(response)
-      );
+      response => {
+        console.log(response);
+        
+        sessionStorage.clear();
 
-    sessionStorage.clear();
+        location.href = '';
+      }
+    );
 
-    location.href = '';
+    
 
   }
 

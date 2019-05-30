@@ -1,7 +1,10 @@
 import { Observable } from 'rxjs';
-import { IMovieProducts } from './IMovieProducts';
+import { IMovieProducts, IOrderSummary } from './IMovieProducts';
 
 export interface IDataService {
+
     getData(): Observable<IMovieProducts[]>
+
+    getAdminOrders(): Observable<IOrderSummary[]>
 
 }
