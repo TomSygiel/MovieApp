@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AdminComponent } from './admin.component';
+import { DetailsNavComponent } from '../details-nav/details-nav.component';
 
 describe('AdminComponent', () => {
   let component: AdminComponent;
@@ -8,7 +9,7 @@ describe('AdminComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminComponent ]
+      declarations: [ AdminComponent, DetailsNavComponent ]
     })
     .compileComponents();
   }));
@@ -23,3 +24,4 @@ describe('AdminComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
