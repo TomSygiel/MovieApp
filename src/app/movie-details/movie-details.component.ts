@@ -3,6 +3,7 @@ import { IMovieProducts } from '../interfaces/IMovieProducts';
 import { DataService } from '../services/data.service';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',

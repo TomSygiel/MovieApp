@@ -1,17 +1,34 @@
 <main>
 
-  <div class="row" >
+  <div class="row d-sm-block d-lg-none" >
 
-    <div class="movie_details col-6">
-      <h1>{{ singleMovieDetail?.name }}</h1>
-      <p>{{ singleMovieDetail?.year }}</p>
-      <p>{{ singleMovieDetail?.description }}</p>
+    <div class="profile-image" [style.background-image]="'url(' + singleMovieDetail?.imageUrl + ')'">
+    
+      <div class="movie_details col-sm-12">
+        <h1>{{ singleMovieDetail?.name }}</h1>
+        <p>{{ singleMovieDetail?.year }}</p>
+        <p>{{ singleMovieDetail?.description }}</p>
 
-      <app-details-form class="card formCard" [singleMovieDetail]="singleMovieDetail" enabled="false"></app-details-form>
+        <app-details-form class="card formCard" [singleMovieDetail]="singleMovieDetail" enabled="false"></app-details-form>
+
+      </div>
 
     </div>
 
-    <div class="img_frame col-6">
+  </div>
+
+  <div class="row d-none d-lg-block" >
+
+    <div class="movie_details d-none d-lg-block col-lg-6">
+        <h1>{{ singleMovieDetail?.name }}</h1>
+        <p>{{ singleMovieDetail?.year }}</p>
+        <p>{{ singleMovieDetail?.description }}</p>
+
+        <app-details-form class="card formCard" [singleMovieDetail]="singleMovieDetail" enabled="false"></app-details-form>
+
+    </div>
+
+    <div class="img_frame d-none d-lg-block col-lg-6">
         <img class="img_detail" src="{{ singleMovieDetail?.imageUrl }}" alt="{{ singleMovieDetail?.name }}" />
     </div>
           
