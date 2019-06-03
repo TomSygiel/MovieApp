@@ -36,11 +36,15 @@ input[name=streaming_options], select, textarea {
 	font-family:Arial;
 	font-weight:bold;
 	text-decoration:none;
-    text-shadow:0px 1px 0px #810e05;
+  text-shadow:0px 1px 0px #810e05;
 	
 	font-size:20px;
 	padding:6px 24px;
 	margin-top: 80px;
+}
+
+.myButton:disabled {
+	display: none;
 }
 
 .myButton:active {

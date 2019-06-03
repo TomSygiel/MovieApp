@@ -66,6 +66,11 @@ input[name=email_input], select, textarea {
 	margin-top: 40px;
 }
 
+/*Button not visisble until required information is filled in */
+.myButton:disabled {
+	display: none;
+}
+
 .myButton:active {
 	position:relative;
 	top:1px;

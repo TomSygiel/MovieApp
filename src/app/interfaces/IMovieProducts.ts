@@ -4,6 +4,12 @@ export interface IMovieProducts {
     price: number;
     imageUrl: string;
     description: string;
+    productCategory: IProductCategory[];
+}
+
+export interface IProductCategory {
+    categoryId: number, 
+    category: null
 }
 
 export interface IOrderObject {
@@ -38,4 +44,9 @@ export interface IOrderSummaryRow {
     orderId: number;
     productId: number;
     amount: number;
+}
+
+export interface ICategorySelector {
+    id: number;
+    name: string;
 }

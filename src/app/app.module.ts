@@ -13,7 +13,8 @@ import { DetailsFormComponent } from './details-form/details-form.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AdminComponent } from './admin/admin.component';
-// import { DummyComponent } from './movie-details/movie-details.component.spec';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AdminComponent } from './admin/admin.component';
     DetailsFormComponent,
     CheckoutComponent,
     AdminComponent,
-    // DummyComponent
+    PageNotFoundComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,

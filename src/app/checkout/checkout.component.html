@@ -21,12 +21,12 @@
 
       <label>
         <h5><strong>Enter your email to start streaming:</strong></h5>
-          <input name="email_input" type="text" placeholder="Enter your e-mail" formControlName="emailAddress">
+          <input name="email_input" type="text" placeholder="Enter your e-mail" formControlName="emailAddress" required>
       </label>
 
       <br />
 
-      <button class="myButton" type="submit">Confirm</button>
+      <button class="myButton" [disabled]='!orderForm.valid' type="submit">Confirm</button>
 
     </form>
   </div>

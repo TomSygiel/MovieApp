@@ -1,8 +1,18 @@
 <app-home-header></app-home-header>
 
-<main>
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a *ngFor='let category of categories' [routerLink]="['/categories', category?.id]"
+    routerLinkActiveOptions = "{ exact: true }" style="text-transform: uppercase;">{{ category.name }}</a>
+  </div>
+
+<main id="main">
+
+  <h5 class="category_heading" (click)="openNav()" style="text-transform: uppercase;">categories</h5> 
+
   <div class="row" >
-  
+    
+    <!-- Displaying all movies -->
     <div class="row__inner" *ngFor="let singleMovie of movies">
     
       <a [routerLink]="['/details', singleMovie?.id]" routerLinkActive="active" routerLinkActiveOptions = "{ exact: true }">
@@ -20,15 +30,16 @@
           </div>
           
         </div>
-
+      
       </a>
-
-    </div>
     
+    </div>
+
   </div>
 
 </main>
 
 <app-home-navigation></app-home-navigation>
+
 
 
