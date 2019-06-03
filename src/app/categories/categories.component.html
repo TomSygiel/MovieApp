@@ -1,0 +1,37 @@
+<app-home-header></app-home-header>
+
+<main id="main">
+
+  <h5 class="selected_category_heading" style="text-transform: uppercase;">{{ category.name }}</h5>
+
+  <div class="row" >
+
+    <!-- Categorised movies -->
+    <div class="row__inner" *ngFor="let onlySelectedCategory of categorisedMovies">
+      
+        <a [routerLink]="['/details', onlySelectedCategory?.id]" routerLinkActive="active" routerLinkActiveOptions = "{ exact: true }">
+          
+          <div class="tile">
+            
+              <div class="tile__media">
+                <img class="tile__img" src="{{ onlySelectedCategory?.imageUrl }}" alt="{{ onlySelectedCategory?.name }}" />
+              </div>
+
+            <div class="tile__details">
+              <div class="tile__title">
+                {{ onlySelectedCategory?.name | slice:0:28 }}
+              </div>
+            </div>
+            
+          </div>
+        
+        </a>
+      
+     </div>
+     <!-- Categorised movies -->
+
+  </div>
+
+</main>
+
+<app-details-nav></app-details-nav>
