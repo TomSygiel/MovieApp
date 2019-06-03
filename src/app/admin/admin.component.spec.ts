@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AdminComponent } from './admin.component';
 import { DetailsNavComponent } from '../details-nav/details-nav.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AdminComponent', () => {
   let component: AdminComponent;
@@ -9,7 +9,8 @@ describe('AdminComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminComponent, DetailsNavComponent ]
+      declarations: [ AdminComponent, DetailsNavComponent ],
+      imports: [ HttpClientModule ]
     })
     .compileComponents();
   }));
