@@ -21,6 +21,8 @@ export class CheckoutComponent implements OnInit {
 
   orderDateStamp = moment().format('LLLL');
 
+  showModal = false;
+
   constructor(private service: DataService) {}
 
   ngOnInit() {
@@ -92,8 +94,10 @@ export class CheckoutComponent implements OnInit {
       }
     );
 
-    
+  }
 
+  toggleModal = () => {
+    this.showModal = !this.showModal;
   }
 
 }
