@@ -25,7 +25,6 @@
 	background: #f5f5f1;
 }
 
-
 input[name=email_input], select, textarea {
     width: 100%;
     padding: 12px;
@@ -59,11 +58,11 @@ input[name=email_input], select, textarea {
 	font-family:Arial;
 	font-weight:bold;
 	text-decoration:none;
-    text-shadow:0px 1px 0px #810e05;
+  text-shadow:0px 1px 0px #810e05;
 	
 	font-size:20px;
 	padding:6px 24px;
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 /*Button not visisble until required information is filled in */
@@ -76,6 +75,22 @@ input[name=email_input], select, textarea {
 	top:1px;
 }
 
+/* Modal styling */
+.modal_pop_up {
+	text-align: center;
+}
+.thank_you_note {
+	color: black;
+	text-align: center;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.thank_you_note_paragraph {
+	color: black;
+	text-align: center;
+	font-size: 24px;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -132,4 +147,5 @@ input[name=email_input], select, textarea {
 		top:1px;
 	}
 }
+
 

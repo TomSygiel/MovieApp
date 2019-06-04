@@ -15,6 +15,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CategoriesComponent } from './categories/categories.component';
     AdminComponent,
     PageNotFoundComponent,
     CategoriesComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

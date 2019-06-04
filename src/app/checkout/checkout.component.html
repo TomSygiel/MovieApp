@@ -1,7 +1,7 @@
 <main class="checkoutBody">
   <div class="card orderFormCard">
 
-    <form [formGroup]="orderForm" (ngSubmit)="confirmOrder()" class="streaming_plan_form">
+    <form [formGroup]="orderForm"  class="streaming_plan_form">
     
       <h4><strong>Order Summary</strong></h4>
 
@@ -26,9 +26,23 @@
 
       <br />
 
-      <button class="myButton" [disabled]='!orderForm.valid' type="submit">Confirm</button>
+      <button class="myButton" [disabled]='!orderForm.valid' (click)="toggleModal()" type="submit">Place your order</button>
 
     </form>
+  </div>
+
+  <div class="modal_pop_up">
+
+    <app-modal
+      [show]="showModal"
+      [customClass]="'custom_modal_class'"
+      [closeCallback]="toggleModal"
+    >
+      <img src="../../assets/images/fakeflix_logo.png" width="100" height="30" alt="Fakeflix logo">
+      <h3 class="thank_you_note">Thank you for your order!</h3>
+      <p class="thank_you_note_paragraph">Simply confirm and continue to browse</p>
+      <button class="modal_opener myButton" (click)="confirmOrder()">Confirm</button>
+    </app-modal>
   </div>
 
 </main>
