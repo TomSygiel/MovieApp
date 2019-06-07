@@ -12,6 +12,6 @@ export class MovieFilterPipe implements PipeTransform {
         }
 
         return movies.filter(movie => 
-            movie.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== 1);
+            movie.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0);
     }
 }

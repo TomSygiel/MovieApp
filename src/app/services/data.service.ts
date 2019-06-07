@@ -37,7 +37,7 @@ export class DataService implements IDataService {
   }
 
   getMovieSearchResult(): Observable<IMovieProducts[]> {
-    return this.http.get<IMovieProducts[]>('https://medieinstitutet-wie-products.azurewebsites.net/api/search');
+    return this.http.get<IMovieProducts[]>('https://medieinstitutet-wie-products.azurewebsites.net/api/search?searchTerm=');
   }
   
 }
