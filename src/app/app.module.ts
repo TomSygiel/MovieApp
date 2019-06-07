@@ -16,6 +16,8 @@ import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ModalComponent } from './modal/modal.component';
+import { SearchMovieComponent } from './search-movie/search-movie.component';
+import { MovieFilterPipe } from './filter/movie-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { ModalComponent } from './modal/modal.component';
     PageNotFoundComponent,
     CategoriesComponent,
     ModalComponent,
+    SearchMovieComponent,
+    MovieFilterPipe
   ],
   imports: [
     BrowserModule,
