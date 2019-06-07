@@ -35,6 +35,10 @@ export class DataService implements IDataService {
   getCategories(): Observable<ICategorySelector[]> {
     return this.http.get<ICategorySelector[]>('https://medieinstitutet-wie-products.azurewebsites.net/api/categories');
   }
+
+  getMovieSearchResult(): Observable<IMovieProducts[]> {
+    return this.http.get<IMovieProducts[]>('https://medieinstitutet-wie-products.azurewebsites.net/api/search');
+  }
   
 }
 
