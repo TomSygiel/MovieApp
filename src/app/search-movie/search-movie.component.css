@@ -21,6 +21,7 @@ section::after {
 .search {
     background: black;
     color: whitesmoke;
+    border: 1px solid white;
 }
 
 input[name=search_input], select, textarea {
@@ -248,10 +249,6 @@ main {
     main {
       height: 750px;
     }
-
-    section::after {
-        height: 60px;
-    }
   
     .tile {
       width: 400px;
@@ -334,8 +331,12 @@ main {
         height: 230px;
     }
 
+    section::after {
+      height: 40px;
+    }
+
     input[name=search_input], select, textarea {
-        margin-top: 20px;
+        margin-top: 50px;
         width: 80%;
         font-size: 20px;
     }
@@ -518,9 +519,13 @@ main {
         text-align: left;
     }
 
+    section::after {
+      height: 30px;
+    }
+
     input[name=search_input], select, textarea {
-        margin-top: 20px;
-        width: 20%;
+        margin-top: 50px;
+        width: 30%;
         font-size: 20px;
     }
 
