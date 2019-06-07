@@ -8,3 +8,11 @@ body {
     max-height: 100vh;
     max-width: 100vw;
 }
+
+*:focus {
+    outline: none;
+}
+
+button:focus {
+    outline:0;
+}

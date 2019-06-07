@@ -4,7 +4,7 @@
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
     <a *ngFor='let category of categories' [routerLink]="['/categories', category?.id]"
     routerLinkActiveOptions = "{ exact: true }" style="text-transform: uppercase;">{{ category.name }}</a>
-  </div>
+</div>
 
 <main id="main">
 

@@ -109,7 +109,7 @@ input[name=email_input], select, textarea {
 		margin-top: 80px;
 	}
 
-	input[name=streaming_options], select, textarea {
+	input[name=email_input], select, textarea {
 		width: 80%;
 		font-size: 16px;
 	  }

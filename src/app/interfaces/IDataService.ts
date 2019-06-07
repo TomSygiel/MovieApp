@@ -9,4 +9,6 @@ export interface IDataService {
 
     getCategories(): Observable<ICategorySelector[]>;
 
+    getMovieSearchResult(): Observable<IMovieProducts[]>;
+
 }

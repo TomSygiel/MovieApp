@@ -21,6 +21,15 @@ h1 {
   margin-top: 5px;
 }
 
+h1 a {
+  color: #e50914;
+  text-decoration: none;
+}
+
+h1 a:active {
+  color: darkred;
+}
+
 p {
   color: white;
   font-size: 18px;
@@ -50,31 +59,19 @@ p {
 
 @media screen and (min-width: 1024px) {
   header {
-    /* padding: 0 50px;
-    margin: 0 auto;
-    width: 100%; */
     height: 200px;
-    /* background-color: #03060B; */
   }
-/* 
-
-  header::after {
-    content: "";
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    border-bottom: 1px solid white;
-  } */
 
   h1 {
-    /* color: #e50914; */
     margin: 5px 90px;
+    font-size: 2.8rem;
+  }
+  
+  h1 a:hover {
+    color: darkred;
   }
 
   p {
-    /* color: white;
-    font-size: 20px; */
     margin: 10px;
   }
 

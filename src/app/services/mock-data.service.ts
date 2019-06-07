@@ -19,6 +19,11 @@ export class MockDataService implements IDataService {
     return of(this.movies);
   }
 
+  //Movie mock data search function
+  getMovieSearchResult(): Observable<IMovieProducts[]> {
+    return of(this.movies);
+  }
+
   //Single order mock data and relevant functions to set the order
   orders: IOrderObject[] = [
     {companyId: 10, created: "0001-01-01T00:00:00", createdBy: null, paymentMethod: null, totalPrice: 0,status: 0, orderRows: [{Amount: 1, ProductId: 1}]}
