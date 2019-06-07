@@ -29,6 +29,11 @@ export class SearchMovieComponent implements OnInit {
       movie.name.toLowerCase().indexOf(searchString.toLowerCase()) >= 0);
   }
 
+  clear(){
+    this.searchTerm = '';
+    location.href = 'search_movie';
+  }
+
   // reset(searchString: string) {
   //   this.searchTerm.reset(searchString);
   //   }

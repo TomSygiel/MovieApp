@@ -2,7 +2,12 @@
 
 <main id="main">
 
-  <h5 class="selected_category_heading" style="text-transform: uppercase;">{{ category.name }}</h5>
+  <h5 class="selected_category_heading" style="text-transform: uppercase;">
+    <a *ngFor='let category of categories' [routerLink]="['/categories', category?.id]"
+    routerLinkActiveOptions = "{ exact: true }" style="text-transform: uppercase;"> {{ category.name }} </a>
+  </h5>
+
+  <!-- <h5 class="selected_category_heading" style="text-transform: uppercase;">{{ category.name }}</h5> -->
 
   <div class="row" >
 

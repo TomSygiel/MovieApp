@@ -1,7 +1,7 @@
 <section>
   <input id="movieSearch" name="search_input" type="text" class="search" [(ngModel)]="searchTerm" placeholder="Search by movie title">
   <br />
-  <button id="resetBttn" type="reset" class="myButton" (click)=reset()>Clear search</button>
+  <button id="resetBttn" type="reset" class="myButton" (click) ="clear()">Clear search</button>
   <!-- <input name="search_input" type="text" class="search" [formControl]="searchQuery" placeholder="Search by movie title">
   <br />
   <button class="myButton" (click)=searchForMovieTitle(searchQuery)>Search</button> -->
