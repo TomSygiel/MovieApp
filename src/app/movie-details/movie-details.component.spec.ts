@@ -20,7 +20,6 @@ describe('MovieDetailsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [MovieDetailsComponent, DetailsFormComponent, DetailsNavComponent],
       imports: [RouterTestingModule.withRoutes([])],
-      // imports: [RouterTestingModule.withRoutes([{ path: 'details/:id', component: DummyComponent}])],
       providers: [ { provide: ActivatedRoute, useValue: activatedRoute },
         { provide: DataService, useClass: MockDataService }]
     })

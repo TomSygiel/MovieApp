@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { IMovieProducts, ICategorySelector } from '../interfaces/IMovieProducts';
 import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-search-movie',
   templateUrl: './search-movie.component.html',
-  styleUrls: ['./search-movie.component.css']
+  styleUrls: ['./search-movie.component.css'],
 })
 export class SearchMovieComponent implements OnInit {
 
@@ -21,7 +21,14 @@ export class SearchMovieComponent implements OnInit {
   }
   set searchTerm(value: string) {
     this._searchTerm = value;
-    this.filteredMovies = this.searchForMovieTitle(value);
+    console.log("Searchterm: ", value);
+    if(value !== '') {
+      this.filteredMovies = this.searchForMovieTitle(value);
+    }
+    else {
+
+      this.filteredMovies = this.movies;
+    }
   }
 
   searchForMovieTitle(searchString: string) {
@@ -31,13 +38,8 @@ export class SearchMovieComponent implements OnInit {
 
   clear(){
     this.searchTerm = '';
-    location.href = 'search_movie';
+    this.filteredMovies = this.movies;
   }
-
-  // reset(searchString: string) {
-  //   this.searchTerm.reset(searchString);
-  //   }
-  // }
 
   constructor(private service: DataService) { 
   
@@ -47,12 +49,10 @@ export class SearchMovieComponent implements OnInit {
 
     //Show all movie selection
     this.service.getData().subscribe(movieList => {
-        this.filteredMovies = movieList
+        this.filteredMovies = movieList;
+        this.movies = movieList;
         console.log(this.filteredMovies);
     });
-
-    //Filter result
-    this.filteredMovies = this.movies;
 
     this.service.getCategories().subscribe(data => {
       this.categories = data;
