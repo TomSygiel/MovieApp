@@ -18,6 +18,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ModalComponent } from './modal/modal.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
 import { MovieFilterPipe } from './filter/movie-filter.pipe';
+import { SearchAndBrowseNavComponent } from './search-and-browse-nav/search-and-browse-nav.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MovieFilterPipe } from './filter/movie-filter.pipe';
     CategoriesComponent,
     ModalComponent,
     SearchMovieComponent,
-    MovieFilterPipe
+    MovieFilterPipe,
+    SearchAndBrowseNavComponent
   ],
   imports: [
     BrowserModule,

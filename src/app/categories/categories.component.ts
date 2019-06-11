@@ -20,6 +20,10 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit() {
 
+    this.service.getCategories().subscribe(data => {
+      this.categories = data;
+    });
+
     //Show selected movies based on categories
     this.route.paramMap.subscribe(myParams => {
       let categoryId = +myParams.get('id');

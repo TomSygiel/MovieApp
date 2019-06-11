@@ -1,33 +1,31 @@
 <section>
   <input id="movieSearch" name="search_input" type="text" class="search" [(ngModel)]="searchTerm" placeholder="Search by movie title">
   <br />
-  <button id="resetBttn" type="reset" class="myButton" (click)=reset()>Clear search</button>
-  <!-- <input name="search_input" type="text" class="search" [formControl]="searchQuery" placeholder="Search by movie title">
-  <br />
-  <button class="myButton" (click)=searchForMovieTitle(searchQuery)>Search</button> -->
+  <button id="resetBttn" type="reset" class="myButton" (click) ="clear()">Clear search</button>
 </section>
 
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <a *ngFor='let category of categories' [routerLink]="['/categories', category?.id]"
-  routerLinkActiveOptions = "{ exact: true }" style="text-transform: uppercase;">{{ category.name }}</a>
+  <a *ngFor='let category of categories' [routerLink]="['/categories', category?.id]" routerLinkActiveOptions = "{ exact: true }" style="text-transform: uppercase;">
+    {{ category.name }}
+  </a>
 </div>
 
 <main id="main">
 
-  <h5 class="category_heading" (click)="openNav()" style="text-transform: uppercase;">categories</h5> 
+  <h5 class="category_heading" (click)="openNav()" style="text-transform: uppercase;">genres</h5> 
 
   <div class="row" >
     
-    <div class="row__inner" *ngFor="let singleMovie of filteredMovies">
+    <div class="row__inner" *ngFor="let singleMovie of filteredMovies | movieFilter : searchTerm">
     
       <a [routerLink]="['/details', singleMovie?.id]" routerLinkActive="active" routerLinkActiveOptions = "{ exact: true }">
         
         <div class="tile">
           
-            <div class="tile__media">
-              <img class="tile__img" src="{{ singleMovie?.imageUrl }}" alt="{{ singleMovie?.name }}" />
-            </div>
+          <div class="tile__media">
+            <img class="tile__img" src="{{ singleMovie?.imageUrl }}" alt="{{ singleMovie?.name }}" />
+          </div>
 
           <div class="tile__details">
             <div class="tile__title">

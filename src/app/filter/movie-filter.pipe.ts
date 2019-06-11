@@ -2,7 +2,8 @@ import { PipeTransform, Pipe } from '@angular/core';
 import { IMovieProducts } from '../interfaces/IMovieProducts';
 
 @Pipe({
-    name: 'movieFilter'
+    name: 'movieFilter',
+    pure: false
 })
 
 export class MovieFilterPipe implements PipeTransform {

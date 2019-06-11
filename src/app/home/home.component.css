@@ -133,7 +133,7 @@ main {
   transition: 0.3s;
 }
 
-.sidebar a:active {
+.sidebar a:focus {
   color: #e50914;
 }
 

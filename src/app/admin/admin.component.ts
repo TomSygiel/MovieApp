@@ -46,10 +46,10 @@ export class AdminComponent implements OnInit {
 
   }
 
-  removeOrder(id) {
+  removeOrder(id: number) {
     var singleOrders = this.orderSummary;
 
-    this.service.deleteOrder(id).subscribe(data => {
+    this.service.deleteOrder(id).subscribe(() => {
         for(var i = 0;i < singleOrders.length; i++) {
           if(singleOrders[i].id == id) {
             singleOrders.splice(i, 1);
@@ -59,23 +59,3 @@ export class AdminComponent implements OnInit {
 
   }
 }
-
-// interface IOrderPresentation {
-//   id: number;
-//   product: IMovieProducts[];
-//   date: string;
-//   email:string;
-//   planPrice: number;
-// }
-
-//   this.orderPresentation.push({
-        //     id: order.orderRows[0].productId,
-        //     product: this.singleMovieFromOrder,
-        //     date: order.created,
-        //     email: order.createdBy,
-        //     planPrice: order.totalPrice
-        //   });
-        // });
-
-        // console.log(this.orderPresentation);
-

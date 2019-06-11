@@ -17,7 +17,7 @@ export class MovieDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(myMovieParams => {
-      let id = myMovieParams.get('id'); // This will give you your id
+      let id = myMovieParams.get('id');
 
       console.log("Id from component: ", id);
 
@@ -28,8 +28,6 @@ export class MovieDetailsComponent implements OnInit {
   getMovieDetail(id: number) {
     this.service.getData().subscribe(data => {
       this.singleMovieDetail = data.find(a => a.id === id);
-
-      // console.log(this.singleMovieDetail);
     });
 
   }
