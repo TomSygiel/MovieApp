@@ -92,7 +92,7 @@ export class CheckoutComponent implements OnInit {
         
         sessionStorage.clear();
 
-        // location.href = '';
+        location.href = '';
       }
     );
 
