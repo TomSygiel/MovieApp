@@ -10,9 +10,9 @@ export class MockDataService implements IDataService {
 
   //Movie mock data and function to retrive it
   movies: IMovieProducts[] = [
-    {id: 1, name: 'Movie One', price: 100, imageUrl: 'https://bit.ly/2Wgcmpx', description: 'Really a good movie!', productCategory: [{categoryId: 1, category: null}]},
-    {id: 2, name: 'Movie Two', price: 150, imageUrl: 'https://bit.ly/2Wgcmpx', description: 'Really a great movie!', productCategory: [{categoryId: 2, category: null}]},
-    {id: 3, name: 'Movie Three', price: 200, imageUrl: 'https://bit.ly/2Wgcmpx', description: 'Really a best movie!', productCategory: [{categoryId: 3, category: null}]}
+    {id: 1, name: 'Movie One', price: 100, imageUrl: 'https://bit.ly/2Wgcmpx', year: 2000,  description: 'Really a good movie!', productCategory: [{categoryId: 1, category: null}]},
+    {id: 2, name: 'Movie Two', price: 150, imageUrl: 'https://bit.ly/2Wgcmpx', year: 2000, description: 'Really a great movie!', productCategory: [{categoryId: 2, category: null}]},
+    {id: 3, name: 'Movie Three', price: 200, imageUrl: 'https://bit.ly/2Wgcmpx', year: 2000, description: 'Really a best movie!', productCategory: [{categoryId: 3, category: null}]}
   ]
 
   getData(): Observable<IMovieProducts[]> {

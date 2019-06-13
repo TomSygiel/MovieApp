@@ -3,6 +3,7 @@ export interface IMovieProducts {
     name: string;
     price: number;
     imageUrl: string;
+    year: number;
     description: string;
     productCategory: IProductCategory[];
 }
