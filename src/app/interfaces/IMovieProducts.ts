@@ -13,6 +13,7 @@ export interface IProductCategory {
 }
 
 export interface IOrderObject {
+    id: number;
     companyId: number;
     created: string;
     createdBy: string;

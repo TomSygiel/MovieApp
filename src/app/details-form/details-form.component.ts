@@ -50,7 +50,8 @@ export class DetailsFormComponent implements OnInit {
       price = 300;
     }
 
-    this.singleOrderDetail = { 
+    this.singleOrderDetail = {
+      id: 0, 
       companyId: 10, 
       created:'', 
       createdBy: '', 
@@ -62,7 +63,7 @@ export class DetailsFormComponent implements OnInit {
     
     this.service.saveOrder(this.singleOrderDetail);
 
-    location.href = '/checkout';
+    // location.href = '/checkout';
   }
 
 }

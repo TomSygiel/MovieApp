@@ -20,8 +20,8 @@ export class DataService implements IDataService {
     sessionStorage.setItem('orders', JSON.stringify(order));
   }
   
-  createOrder(order: IOrderObject) {
-    return this.http.post('https://medieinstitutet-wie-products.azurewebsites.net/api/orders', order);
+  createOrder(order: IOrderObject): Observable<IOrderObject> {
+    return this.http.post<IOrderObject>('https://medieinstitutet-wie-products.azurewebsites.net/api/orders', order);
   }
 
   getAdminOrders(): Observable<IOrderSummary[]> {
