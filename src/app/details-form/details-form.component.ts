@@ -63,7 +63,7 @@ export class DetailsFormComponent implements OnInit {
     
     this.service.saveOrder(this.singleOrderDetail);
 
-    // location.href = '/checkout';
+    location.href = '/checkout';
   }
 
 }
