@@ -8,6 +8,8 @@ import { MockDataService } from '../services/mock-data.service';
 import { ActivatedRoute } from '@angular/router';
 import { DetailsFormComponent } from '../details-form/details-form.component';
 import { DetailsNavComponent } from '../details-nav/details-nav.component';
+import { SearchAndBrowseNavComponent } from '../search-and-browse-nav/search-and-browse-nav.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('MovieDetailsComponent', () => {
   let component: MovieDetailsComponent;
@@ -18,10 +20,21 @@ describe('MovieDetailsComponent', () => {
   beforeEach(async(() => {
     activatedRoute.setParams({ id: 1 });
     TestBed.configureTestingModule({
-      declarations: [MovieDetailsComponent, DetailsFormComponent, DetailsNavComponent],
-      imports: [RouterTestingModule.withRoutes([])],
-      providers: [ { provide: ActivatedRoute, useValue: activatedRoute },
-        { provide: DataService, useClass: MockDataService }]
+      declarations: [
+        MovieDetailsComponent, 
+        DetailsFormComponent, 
+        DetailsNavComponent,
+        SearchAndBrowseNavComponent
+      ],
+      imports: [
+        RouterTestingModule.withRoutes([]),
+        FormsModule,
+        ReactiveFormsModule 
+      ],
+      providers: [ 
+        { provide: ActivatedRoute, useValue: activatedRoute },
+        { provide: DataService, useClass: MockDataService }
+      ]
     })
       .compileComponents();
   }));

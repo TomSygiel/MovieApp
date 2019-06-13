@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { IOrderSummary, IMovieProducts } from '../interfaces/IMovieProducts';
-import { MovieDetailsComponent } from '../movie-details/movie-details.component';
-import { SinglePropOffsetValuesIndex } from '@angular/core/src/render3/interfaces/styling';
-import { markParentViewsForCheck } from '@angular/core/src/view/util';
-import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-admin',

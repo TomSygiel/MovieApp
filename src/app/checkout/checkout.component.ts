@@ -75,6 +75,7 @@ export class CheckoutComponent implements OnInit {
   confirmOrder() {
 
     this.savedOrder = { 
+      id: 0,
       companyId: 10, 
       created: this.orderDateStamp, 
       createdBy: this.orderForm.value.emailAddress, 
@@ -86,11 +87,12 @@ export class CheckoutComponent implements OnInit {
 
     this.service.createOrder(this.savedOrder).subscribe(
       response => {
+        this.savedOrder = response;
         console.log(response);
         
         sessionStorage.clear();
 
-        location.href = '';
+        // location.href = '';
       }
     );
 

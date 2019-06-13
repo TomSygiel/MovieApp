@@ -29,14 +29,24 @@ describe('DetailsFormComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should create correct order object', () => {
-  //   expect(component.singleOrderDetail).toBeUndefined();
+  it('should create correct order object', () => {
+    expect(component.singleOrderDetail).toBeUndefined();
 
-  //   component.singleMovieDetail = {id: 1, name: 'Movie One', price: 100, imageUrl: 'https://bit.ly/2Wgcmpx', description: 'Really a good movie!'};
-  //   component.streamingPlanForm.get('streamingOptions').value;
+    component.singleMovieDetail = {
+      id: 1, 
+      name: 'Movie One', 
+      price: 100, 
+      imageUrl: 'https://bit.ly/2Wgcmpx', 
+      description: 'Really a good movie!',
+      productCategory: []
+    };
+    
+    let planValue = component.streamingPlanForm.get('streamingOptions').value;
 
-  //   component.placeOrders(component.singleMovieDetail.id);
-  //   expect(component.singleOrderDetail).toBeDefined();
-  //   expect(component.singleOrderDetail.status).toBe(1);
-  // })
+    component.placeOrders();
+
+    let orderFromSession = JSON.parse(sessionStorage.getItem("orders"));
+    expect(orderFromSession).toBeDefined();
+    expect(orderFromSession.status).toBe(planValue);
+  });
 });
