@@ -44,18 +44,16 @@ describe('SearchMovieComponent', () => {
     expect(filterPipe).toBeDefined();
   });
 
-  // it('should filter correctly', () => {
-  //   const movies = [];
+  it('should filter correctly', () => {
+    const movies = [];
 
-  //   movies.push({id: 1, name: 'Movie One', price: 100, imageUrl: 'https://bit.ly/2Wgcmpx', description: 'Really a good movie!', productCategory: [{categoryId: 1, category: null}]});
-  //   movies.push({id: 2, name: 'Movie Two', price: 150, imageUrl: 'https://bit.ly/2Wgcmpx', description: 'Really a great movie!', productCategory: [{categoryId: 2, category: null}]});
-  //   movies.push({id: 3, name: 'Movie Three', price: 200, imageUrl: 'https://bit.ly/2Wgcmpx', description: 'Really a best movie!', productCategory: [{categoryId: 3, category: null}]});
-
-  //   // component.searchForMovieTitle(1);
+    movies.push({id: 1, name: 'Movie One', price: 100, imageUrl: 'https://bit.ly/2Wgcmpx', description: 'Really a good movie!', productCategory: [{categoryId: 1, category: null}]});
+    movies.push({id: 2, name: 'Movie Two', price: 150, imageUrl: 'https://bit.ly/2Wgcmpx', description: 'Really a great movie!', productCategory: [{categoryId: 2, category: null}]});
+    movies.push({id: 3, name: 'Movie Three', price: 200, imageUrl: 'https://bit.ly/2Wgcmpx', description: 'Really a best movie!', productCategory: [{categoryId: 3, category: null}]});
     
-  //   const filtered = filterPipe.transform(movies, 'name', 'Movie One');
-  //   expect(filtered.length).toBe(1);
+    const filtered = filterPipe.transform(movies, 'Movie One');
+    expect(filtered.length).toBe(1);
 
-  // });
+  });
 
 });
