@@ -3,8 +3,12 @@
   <div class="row d-sm-block d-lg-none" >
 
     <div class="profile-image" [style.background-image]="'url(' + singleMovieDetail?.imageUrl + ')'">
+      
     
       <div class="movie_details col-sm-12">
+        <a routerLink="" routerLinkActive="active" routerLinkActiveOptions = "{ exact: true }">&times;
+          <!-- <img src="../../assets/images/white_x_svg.svg" width="20" height="20" alt="X button to close the pop up window"> -->
+        </a>
         <h1>{{ singleMovieDetail?.name }}</h1>
         <p>{{ singleMovieDetail?.year }}</p>
         <p>{{ singleMovieDetail?.description }}</p>

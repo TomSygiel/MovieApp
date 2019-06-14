@@ -10,8 +10,13 @@ main {
   font-family: 'Open Sans', sans-serif;
   height: 480px;
   display: inline-block;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -21,7 +26,8 @@ main {
 
 .row {
   overflow-x: auto;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   padding-left: 40px;
 }
 
@@ -30,7 +36,11 @@ main {
 }
 
 .row__inner {
+  -webkit-transition: 450ms -webkit-transform;
+  transition: 450ms -webkit-transform;
+  -o-transition: 450ms transform;
   transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
   font-size: 0;
   white-space: nowrap;
   margin: 0;
@@ -44,16 +54,21 @@ main {
   margin: 10px;
   font-size: 16px;
   cursor: pointer;
+  -webkit-transition: 450ms all;
+  -o-transition: 450ms all;
   transition: 450ms all;
-  transform-origin: left center;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
 }
 
 .tile__img {
   width: 260px;
   height: 380px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
+/* 
 .tile__details:after,
 .tile__details:before {
   content: '';
@@ -92,7 +107,7 @@ main {
   width: 50px;
   height: 50px;
   color: #ecf0f1;
-}
+} */
 
 .tile__title {
   position: absolute;
@@ -114,6 +129,8 @@ main {
   background-color: #111;
   overflow-x: hidden;
   padding-top: 60px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   background: rgba(0,0,0,0.85);
 }
@@ -130,6 +147,8 @@ main {
   font-weight: bold;
   color: darkred;
   display: block;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -156,6 +175,8 @@ main {
 }
 
 #main {
+  -webkit-transition: margin-left .5s;
+  -o-transition: margin-left .5s;
   transition: margin-left .5s;
   padding: 20px;
 }
@@ -174,14 +195,16 @@ main {
   .tile {
     width: 400px;
     height: 600px;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     font-size: 16px;
   }
 
   .tile__img {
     width: 400px;
     height: 600px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   
   .tile__title {
@@ -191,7 +214,7 @@ main {
     color: #ecf0f1;
     font-size: 30px; 
   }
-  
+/*   
   .tile__details:after,
   .tile__details:before {
     content: '';
@@ -231,7 +254,7 @@ main {
     width: 50px;
     height: 50px;
     color: #ecf0f1;
-  }
+  } */
 
   .category_heading {
     color: #e50914;
@@ -256,8 +279,13 @@ main {
     margin: 0 auto;
     height: 360px;
     display: inline-block;
-    flex-direction: row;
-    align-items: center center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center center;
+        -ms-flex-align: center center;
+            align-items: center center;
     width: 100%;
   }
 
@@ -267,7 +295,8 @@ main {
 
   .row {
     overflow-x: auto;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     padding-left: 30px;
   }
 
@@ -276,7 +305,11 @@ main {
   }
 
   .row__inner {
+    -webkit-transition: 450ms -webkit-transform;
+    transition: 450ms -webkit-transform;
+    -o-transition: 450ms transform;
     transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
     font-size: 0;
     white-space: nowrap;
     margin: 0;
@@ -290,15 +323,20 @@ main {
     margin: 20px 10px;
     font-size: 12px;
     cursor: pointer;
+    -webkit-transition: 450ms all;
+    -o-transition: 450ms all;
     transition: 450ms all;
-    transform-origin: left center;
+    -webkit-transform-origin: left center;
+        -ms-transform-origin: left center;
+            transform-origin: left center;
     color: white;
   }
 
   .tile__img {
     width: 240px;
     height: 360px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   main::after {
@@ -317,7 +355,12 @@ main {
     top: 0;
     font-size: 14px;
     opacity: 0;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0)));
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-transition: 450ms opacity;
+    -o-transition: 450ms opacity;
     transition: 450ms opacity;
   }
 
@@ -372,7 +415,8 @@ main {
   }
 
   .row__inner:hover {
-    transform: translate3d(-10px, 0, 0);
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
   }
 
   .row__inner:hover .tile {
@@ -380,12 +424,15 @@ main {
   }
 
   .row__inner:hover .tile:hover {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
   }
 
   .tile:hover~.tile {
-    transform: translate3d(80px, 0, 0);
+    -webkit-transform: translate3d(80px, 0, 0);
+            transform: translate3d(80px, 0, 0);
   }
 
   /* The sidebar menu */

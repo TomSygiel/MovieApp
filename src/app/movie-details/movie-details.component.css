@@ -25,7 +25,18 @@ main {
 .movie_details {
   padding: 40px 20px 0 20px;
   max-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.movie_details a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 50px;
+  float: right;
+  margin-top: -50px;
 }
 
 h1 {
@@ -41,7 +52,8 @@ h1 {
 .img_detail {
   width: 100%;
   max-height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   float: right;
 }
 
@@ -58,6 +70,11 @@ h1 {
 
   .movie_details {
     padding: 100px 100px 100px 100px;
+  }
+
+  .movie_details a {
+    font-size: 70px;
+    margin-top: -50px;
   }
   
   .formCard {
@@ -108,7 +125,8 @@ h1 {
   .img_detail {
     width: 100%;
     max-height: auto;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     float: right;
   }
 

@@ -2,8 +2,6 @@
   <div class="overlay" (click)="closeCallback()"></div>
   <div class="modal_content">
     <ng-content></ng-content>
-    <button title="Close" class="close_modal" (click)="closeCallback()">
-      <img src="../../assets/images/close_x_button.png" width="20" height="20" alt="X button to close the pop up window">
-    </button>
+    <button title="Close" class="close_modal" (click)="closeCallback()" style="font-size: 50px; margin-top: -20px;">&times;</button>
   </div>
 </div>
