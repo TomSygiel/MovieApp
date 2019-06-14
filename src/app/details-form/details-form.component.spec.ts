@@ -36,7 +36,8 @@ describe('DetailsFormComponent', () => {
       id: 1, 
       name: 'Movie One', 
       price: 100, 
-      imageUrl: 'https://bit.ly/2Wgcmpx', 
+      imageUrl: 'https://bit.ly/2Wgcmpx',
+      year: 2000,
       description: 'Really a good movie!',
       productCategory: []
     };
