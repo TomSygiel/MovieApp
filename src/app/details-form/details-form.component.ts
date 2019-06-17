@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { IMovieProducts, IOrderObject } from '../interfaces/IMovieProducts';
 import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-details-form',
@@ -24,7 +25,7 @@ export class DetailsFormComponent implements OnInit {
     { id: 2, value: '30-day access 300 SEK'}
   ]
 
-  constructor(private service: DataService, private fb: FormBuilder) { }
+  constructor(private service: DataService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
 
@@ -63,7 +64,8 @@ export class DetailsFormComponent implements OnInit {
     
     this.service.saveOrder(this.singleOrderDetail);
 
-    location.href = 'checkout';
+    this.router.navigateByUrl('checkout');
+    // location.href = '/checkout';
   }
 
 }
